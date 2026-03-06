@@ -1,20 +1,33 @@
-# Log Analysis Project – Linux Authentication Investigation
+## Project Overview
 
-## Objective
-The objective of this project was to analyze Linux authentication logs to identify failed login attempts and determine whether suspicious activity (such as brute-force attacks) was occurring.
+This project demonstrates how Linux authentication logs can be analyzed to detect suspicious login activity.
+
+In this lab, I investigated failed SSH login attempts recorded in the system authentication logs. The goal was to identify potential brute-force attacks and understand how security analysts use log analysis to detect threats.
+
+This investigation was performed in a local Linux virtual machine using command-line tools commonly used in cybersecurity environments.
 
 ---
 
 ## Environment
-- OS: Ubuntu / RHEL (specify yours)
-- Log file analyzed: /var/log/auth.log
-- Tools used: grep, cat, wc
-- Lab: Local VM inside VirtualBox
+
+- Operating System: Ubuntu Linux (Virtual Machine)
+- Log File Analyzed: /var/log/auth.log
+- Tools Used:
+  - grep
+  - cat
+  - wc
+  - less
+- Virtualization: Oracle VirtualBox
 
 ---
 
 ## Step 1 – Generate Failed Login Attempts
-To simulate suspicious behavior, I attempted multiple failed SSH logins:
+
+To simulate suspicious behavior, multiple failed SSH login attempts were performed.
+
+These attempts were intentionally made with incorrect credentials in order to generate authentication failures inside the Linux system logs.
+
+This allows us to analyze how Linux records authentication activity.
 
 
 ---

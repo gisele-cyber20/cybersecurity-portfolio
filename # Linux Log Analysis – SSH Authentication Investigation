@@ -1,78 +1,91 @@
-# Project Overview
-
+Linux Log Analysis – SSH Authentication Investigation
+Project Overview
 This project demonstrates how Linux authentication logs can be analyzed to detect suspicious login activity and investigate potential brute-force attacks.
-
-A Linux virtual machine was used to simulate failed SSH login attempts. System logs were then reviewed using command-line tools to identify authentication failures and analyze the activity recorded in the logs.## Project Overview
-
-
----
-
-
- ## Lab Environment
-
-- Operating System: Ubuntu Linux VM
-- Virtualization Platform: VirtualBox
-- Log File Analyzed: `/var/log/auth.log`
-- Tools Used:
-  - journalctl
-  - grep
-  - tail
-  - wc
-
----
-
-## Step 1 – Generate Failed Login Attempts
-
-To simulate suspicious behavior, multiple failed SSH login attempts were performed.
-
-These attempts were intentionally made with incorrect credentials in order to generate authentication failures inside the Linux system logs.
-
-This allows us to analyze how Linux records authentication activity.
-
-
----
-
-## Step 2 – Review Authentication Logs
-
-
----
-
-## Step 3 – Filter Failed Password Attempts
-
----
-
-## Step 4 – Count Failed Attempts
-
-
----
-
-## Findings
-
-- Multiple failed login attempts were recorded
-- The logs show:
-  - Timestamp
-  - Username attempted
-  - Source IP address
-  - Authentication failure reason
-- Repeated failed attempts could indicate brute-force activity
-
----
-
-## Security Analysis
-
-If this activity were observed in a production environment, I would:
-
-- Identify the source IP address
-- Check if attempts are automated (high frequency)
-- Block malicious IP using firewall rules
-- Implement fail2ban to prevent brute-force attacks
-- Review SSH configuration for hardening
-
----
-
-## Lessons Learned
-
-- Linux authentication logs provide detailed evidence of login activity
-- grep is powerful for log filtering
-- Repeated failed logins are a key indicator of brute-force attempts
-- Log analysis is critical for early detection of security incidents
+A Linux virtual machine was used to simulate failed SSH login attempts. System logs were then reviewed using command-line tools to identify authentication failures and analyze the activity recorded in the logs.
+This investigation replicates a basic Security Operations Center (SOC) log analysis task commonly performed by cybersecurity analysts.
+Lab Environment
+Operating System: Linux VM (RHEL based)
+Virtualization Platform: VirtualBox
+Log File Analyzed: /var/log/secure
+Service Investigated: SSH (Secure Shell)
+Tools Used:
+ssh
+grep
+wc
+ss
+systemctl
+Step 1 – Verify SSH Service Status
+First, the SSH service was verified to ensure it was running on the system.
+Command used:
+systemctl status sshd
+This confirms that the OpenSSH service is active and listening for connections.
+📸 Evidence
+Step 2 – Verify SSH Port is Listening
+Next, the system was checked to confirm that the SSH service was listening on port 22.
+Command used:
+ss -tulpn
+This command displays all active listening ports and the associated processes.
+📸 Evidence
+Step 3 – Generate Failed SSH Login Attempts
+To simulate suspicious activity, multiple failed login attempts were performed using invalid credentials.
+Command used:
+ssh fakeuser@localhost
+The system rejected the login attempts because the username does not exist.
+This activity generated authentication failure entries in the system logs.
+📸 Evidence
+Step 4 – Review Authentication Logs
+Linux authentication activity is recorded in the following log file:
+/var/log/secure
+This file contains records of login attempts, authentication successes, and failures.
+Command used:
+sudo cat /var/log/secure
+The log entries include:
+timestamp
+username attempted
+authentication method
+source IP address
+failure reason
+📸 Evidence
+Step 5 – Filter Failed Login Attempts
+To identify authentication failures, the grep command was used to filter log entries containing "Failed password".
+Command used:
+sudo grep "Failed password" /var/log/secure
+This command isolates only the failed login attempts from the authentication logs.
+📸 Evidence
+Step 6 – Count Failed Login Attempts
+To determine the total number of failed login attempts, the following command was used:
+sudo grep "Failed password" /var/log/secure | wc -l
+Result:
+25 failed login attempts
+This confirms that multiple authentication failures occurred during the simulation.
+📸 Evidence
+Log Analysis Findings
+The investigation identified multiple failed SSH login attempts recorded in the authentication logs.
+Each log entry contained:
+timestamp of the attempt
+username used in the login attempt
+source IP address
+SSH session details
+authentication failure message
+Example log entry:
+Failed password for invalid user fakeuser from ::1 port 53918 ssh2
+Repeated login failures such as these can indicate brute-force attacks against an SSH service.
+Security Recommendations
+If this activity occurred in a production environment, the following security controls should be implemented:
+Block suspicious IP addresses using firewall rules
+Implement Fail2Ban to automatically block repeated login attempts
+Disable root login over SSH
+Enforce SSH key-based authentication
+Monitor authentication logs regularly
+Implement intrusion detection systems
+Skills Demonstrated
+This project demonstrates the following cybersecurity skills:
+Linux system log analysis
+SSH authentication monitoring
+command-line log filtering
+basic incident investigation
+identifying brute-force attack patterns
+Linux security fundamentals
+Project Conclusion
+This project demonstrates how Linux authentication logs can be used to detect suspicious login activity. By generating failed SSH login attempts and analyzing the resulting log entries, it is possible to identify indicators of potential brute-force attacks.
+Log analysis is a critical skill for security analysts because it enables early detection of malicious activity and supports incident response investigations.

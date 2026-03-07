@@ -39,7 +39,7 @@ The SSH service was verified to ensure it was running on the system.
 ### Command Used
 
 systemctl status sshd
-
+ ![Linux Terminal](images/01-linux-terminal.png)
 ### Explanation
 
 This command checks whether the OpenSSH server daemon is active and able to accept incoming SSH connections.
@@ -57,7 +57,7 @@ Next, the system was checked to confirm that SSH is listening for incoming conne
 ### Command Used
 
 ss -tulpn
-
+![SSH Service Running](images/02-ssh-service-running.png)
 ### Expected Result
 
 SSH is listening on:
@@ -73,7 +73,7 @@ To simulate suspicious activity, several login attempts were made using an inval
 ### Command Used
 
 ssh fakeuser@localhost
-
+![Failed SSH Login](images/03-failed-ssh-login.png)
 ### Result
 
 Permission denied (publickey,password)
@@ -87,7 +87,7 @@ Linux authentication logs were examined to identify failed login attempts.
 ### Command Used
 
 sudo cat /var/log/secure
-
+![Authentication Log Evidence](images/04-authentication-log-evidence.png)
 ### Example Log Entry
 
 Failed password for invalid user fakeuser from ::1 port 53918 ssh2

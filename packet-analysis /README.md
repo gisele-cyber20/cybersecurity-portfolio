@@ -71,7 +71,7 @@ This displays DNS query and response packets.
 
 ## Screenshot
 
-![ICMP Traffic](packet-analysis/images/01-icmp-traffic.png)
+![DNS Query](Image/02-dns-query.png)
 
 ## Analysis
 
@@ -104,7 +104,7 @@ http
 
 ## Screenshot
 
-![DNS Query](packet-analysis/images/02-dns-query.png)
+![DNS Query](Image/02-dns-query.png)
 
 ## Analysis
 

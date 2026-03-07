@@ -39,7 +39,7 @@ This allowed the capture of **ICMP Echo Requests and Echo Replies**, which are u
 
 ## Screenshot
 
-![ICMP Traffic](packet-analysis/image/01-icmp-traffic.png)
+![ICMP Traffic](Image/01-icmp-traffic.png)
 
 ## Analysis
 

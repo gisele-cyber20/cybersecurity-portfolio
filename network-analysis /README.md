@@ -100,16 +100,17 @@ Security analysts use tools like **Nmap** to:
 
 ## Basic Nmap Scan
 
-![Basic Nmap Scan](images/01-nmap-basic-scan.png)
+![Basic Nmap Scan](Image/01-nmap-basic-scan.png)
+
 
 ---
 
 ## Service Version Detection
 
-![Service Version Scan](images/02-service-version-scan.png)
+![Service Version Detection](Image/02-service-version-scan.png)
 
 ---
 
 ## Advanced Scan
 
-![Advanced Nmap Scan](images/03-advanced-nmap-scan.png)
+![Advanced Scan](Image/03-advanced-nmap-scan.png)

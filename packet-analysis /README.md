@@ -39,7 +39,7 @@ This allowed the capture of **ICMP Echo Requests and Echo Replies**, which are u
 
 ## Screenshot
 
-![ICMP Traffic](images/01-icmp-traffic.png)
+![ICMP Traffic](packet-analysis/images/01-icmp-traffic.png)
 
 ## Analysis
 
@@ -71,7 +71,7 @@ This displays DNS query and response packets.
 
 ## Screenshot
 
-![DNS Query](images/02-dns-query.png)
+![ICMP Traffic](packet-analysis/images/01-icmp-traffic.png)
 
 ## Analysis
 
@@ -104,7 +104,7 @@ http
 
 ## Screenshot
 
-![HTTP Traffic](images/03-http-traffic.png)
+![DNS Query](packet-analysis/images/02-dns-query.png)
 
 ## Analysis
 

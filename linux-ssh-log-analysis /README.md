@@ -39,7 +39,10 @@ The SSH service was verified to ensure it was running on the system.
 ### Command Used
 
 systemctl status sshd
-![SSH Service Running](images/01-ssh-service-running.png)
+
+### Screenshot
+
+![SSH Service Running](Image/01-ssh-service-running.png)
 ### Explanation
 
 This command checks whether the OpenSSH server daemon is active and able to accept incoming SSH connections.

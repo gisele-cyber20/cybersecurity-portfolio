@@ -60,7 +60,10 @@ Next, the system was checked to confirm that SSH is listening for incoming conne
 ### Command Used
 
 ss -tulpn
-![SSH Port Listening](image/02-ssh-port-listening.png)
+
+### Screenshot
+
+![SSH Port Listening](Image/02-ssh-port-listening.png)
 
 ### Expected Result
 
@@ -77,7 +80,10 @@ To simulate suspicious activity, several login attempts were made using an inval
 ### Command Used
 
 ssh fakeuser@localhost
-![Failed SSH Login Attempt](image/03-ssh-failed-login.png)
+
+### Screenshot
+
+![Failed SSH Logins](Image/03-failed-ssh-logins.png)
 ### Result
 
 Permission denied (publickey,password)
@@ -91,7 +97,10 @@ Linux authentication logs were examined to identify failed login attempts.
 ### Command Used
 
 sudo cat /var/log/secure
-![Authentication Log Review](image/04-auth-log.png)
+
+### Screenshot
+
+![Failed Login Count](Image/04-failed-login-count.png)
 ### Example Log Entry
 
 Failed password for invalid user fakeuser from ::1 port 53918 ssh2
@@ -107,7 +116,6 @@ To isolate failed login attempts, the log file was filtered using grep.
 sudo grep "Failed password" /var/log/secure
 
 
-![Filtered Failed Logins](image/05-grep-failed-logins.png)
 ---
 
 ## Step 6 – Count Failed Login Attempts
@@ -117,7 +125,7 @@ To quantify suspicious activity, the number of failed login attempts was counted
 ### Command Used
 
 sudo grep "Failed password" /var/log/secure | wc -l
-![Failed Login Count](image/06-failed-login-count.png)
+
 ### Result
 
 25 failed login attempts detected

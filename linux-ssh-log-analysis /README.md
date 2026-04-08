@@ -56,6 +56,7 @@ systemctl status sshd
 ### Screenshot
 
 ![SSH Service Running](Image/01-ssh-service-running.png)
+
 ### Explanation
 
 This command checks whether the OpenSSH server daemon is active and able to accept incoming SSH connections.
@@ -88,7 +89,7 @@ TCP port 22
 
 ## Step 3 – Simulate Failed SSH Login Attempts
 
-To simulate suspicious activity, several login attempts were made using an invalid username.
+To simulate a brute-force attack scenario, multiple SSH login attempts were performed using an invalid username.
 
 ### Command Used
 
@@ -97,6 +98,7 @@ ssh fakeuser@localhost
 ### Screenshot
 
 ![Failed SSH Logins](Image/03-failed-ssh-logins.png)
+
 ### Result
 
 Permission denied (publickey,password)
@@ -114,6 +116,7 @@ sudo cat /var/log/secure
 ### Screenshot
 
 ![Failed Login Count](Image/04-failed-login-count.png)
+
 ### Example Log Entry
 
 Failed password for invalid user fakeuser from ::1 port 53918 ssh2
@@ -150,10 +153,11 @@ sudo grep "Failed password" /var/log/secure | wc -l
 Analysis of the authentication logs revealed repeated failed SSH login attempts.
 
 Key observations:
-- Multiple failed login attempts detected (25 total)
+- Multiple failed login attempts detected (30 total)
 - Attempts used an invalid username ("fakeuser")
 - All attempts originated from localhost (::1)
 - Activity pattern is consistent with brute-force behavior simulation
+- This type of activity is commonly associated with brute-force or credential stuffing attacks targeting exposed SSH services.
 
 Although the activity was generated in a controlled lab environment, the patterns closely resemble real-world attack attempts targeting SSH services.
 

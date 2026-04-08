@@ -1,5 +1,7 @@
 # 🔐 Linux Log Analysis – SSH Authentication Investigation
 
+📁 Project Type: Security Monitoring / Log Analysis
+
 ## 📌 Project Overview
 
 This project simulates a real-world Security Operations Center (SOC) investigation involving suspicious SSH authentication activity on a Linux system.
@@ -158,6 +160,7 @@ Key observations:
 - All attempts originated from localhost (::1)
 - Activity pattern is consistent with brute-force behavior simulation
 - This type of activity is commonly associated with brute-force or credential stuffing attacks targeting exposed SSH services.
+- Total failed login attempts analyzed: 30
 
 Although the activity was generated in a controlled lab environment, the patterns closely resemble real-world attack attempts targeting SSH services.
 
@@ -185,4 +188,4 @@ Although the activity was generated in a controlled lab environment, the pattern
 
 ## 📊 Conclusion
 
-This project demonstrates how Linux authentication logs can be analyzed to detect suspicious login activity. Understanding how to investigate system logs is an essential skill for cybersecurity professionals working in Security Operations Centers (SOC).
+This project demonstrates how Linux authentication logs can be analyzed to detect and investigate suspicious login activity. Log analysis is a critical skill for cybersecurity professionals, enabling early detection of unauthorized access attempts and supporting effective incident response in Security Operations Centers (SOC).

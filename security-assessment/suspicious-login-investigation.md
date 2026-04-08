@@ -1,10 +1,10 @@
-# Security Risk Assessment – Risk Register
+# 🛡 Security Risk Assessment – Risk Register Analysis
 
 ## Project Overview
 
 This project demonstrates how cybersecurity risks can be identified and documented using a **risk register**, a common tool used by security teams to track and manage security risks.
 
-A risk register helps organizations understand:
+A risk register enables organizations to identify, evaluate, and prioritize security risks by analyzing:
 
 - Potential security threats
 - The likelihood of those threats occurring
@@ -13,6 +13,19 @@ A risk register helps organizations understand:
 
 ---
 
+## 🎯 SOC / Real-World Relevance
+
+This project reflects how security teams and analysts assess organizational risk and prioritize mitigation strategies.
+
+Understanding risk is essential for:
+
+- Prioritizing security controls
+- Supporting incident response planning
+- Reducing overall attack surface
+- Aligning security practices with business impact
+
+  ---
+  
 # Risk Register Table
 
 | Risk ID | Risk Description | Likelihood | Impact | Risk Level | Mitigation |
@@ -22,6 +35,8 @@ A risk register helps organizations understand:
 | R3 | Phishing attacks targeting employees | High | Medium | High | Conduct employee security awareness training |
 | R4 | Unauthorized access to internal systems | Medium | High | High | Implement role-based access control and monitoring |
 | R5 | Malware infection from downloaded files | Medium | Medium | Medium | Deploy endpoint protection and restrict downloads |
+
+The highest risk identified in this assessment is weak password usage, which presents a critical risk due to its high likelihood and impact.
 
 ---
 
@@ -55,17 +70,18 @@ Based on the risk assessment, the following security improvements are recommende
 
 ---
 
-# Skills Demonstrated
+## 💻 Skills Demonstrated
 
-- Risk identification
-- Risk assessment methodology
-- Security documentation
-- Security policy recommendations
+- Risk identification and analysis
+- Risk assessment methodologies
+- Security documentation and reporting
+- Threat prioritization
+- Security control recommendations
 - Cybersecurity risk management
 
 ---
 
 # Key Takeaway
 
-Risk assessment is an essential part of cybersecurity programs.  
-By identifying and documenting risks, organizations can prioritize security improvements and reduce their exposure to cyber threats.
+Risk assessment is a critical component of cybersecurity programs.  
+By identifying, evaluating, and prioritizing risks, organizations can implement effective security controls and reduce their exposure to potential threats.

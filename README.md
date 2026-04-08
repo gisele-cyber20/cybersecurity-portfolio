@@ -141,7 +141,7 @@ I am currently building toward entry-level roles such as:
 ## Contact
 
 - GitHub: [gisele-cyber20](https://github.com/gisele-cyber20)
-- LinkedIn: Add your LinkedIn link here
+- LinkedIn: [Gisele Ribeiro](https://linkedin.com/in/agiseleribeiro)
 
 ---
 

@@ -2,11 +2,24 @@
 
 ## 📌 Project Overview
 
-This project demonstrates how Linux authentication logs can be analyzed to detect suspicious login activity.
+This project simulates a real-world Security Operations Center (SOC) investigation involving suspicious SSH authentication activity on a Linux system.
 
-A Linux virtual machine was used to simulate failed SSH login attempts. The authentication logs were then reviewed using command-line tools to identify potential brute-force activity.
+Multiple failed login attempts were generated and analyzed using system logs to identify potential brute-force behavior. Log analysis techniques were applied to detect patterns, quantify failed attempts, and assess potential security risks.
 
-This investigation replicates a basic Security Operations Center (SOC) task where analysts review system logs to detect unauthorized access attempts.
+This project demonstrates how security analysts investigate authentication logs to detect unauthorized access attempts and respond to potential threats.
+
+---
+
+## 🎯 SOC Relevance
+
+This project reflects common tasks performed by Security Operations Center (SOC) analysts, including:
+
+- Monitoring authentication logs for suspicious activity
+- Identifying brute-force login attempts
+- Investigating failed login patterns
+- Using command-line tools to analyze security events
+
+These skills are essential for detecting and responding to unauthorized access attempts in real-world environments.
 
 ---
 
@@ -128,19 +141,21 @@ sudo grep "Failed password" /var/log/secure | wc -l
 
 ### Result
 
-25 failed login attempts detected
+30 failed login attempts detected
 
 ---
 
 ## 🔎 Findings
 
-Multiple failed login attempts targeted the SSH service.
+Analysis of the authentication logs revealed repeated failed SSH login attempts.
 
-Observations:
+Key observations:
+- Multiple failed login attempts detected (25 total)
+- Attempts used an invalid username ("fakeuser")
+- All attempts originated from localhost (::1)
+- Activity pattern is consistent with brute-force behavior simulation
 
-- Invalid username used
-- Attempts originated from localhost
-- Activity simulated in the lab environment
+Although the activity was generated in a controlled lab environment, the patterns closely resemble real-world attack attempts targeting SSH services.
 
 ---
 
@@ -153,14 +168,14 @@ Observations:
 - Enable multi-factor authentication (MFA)
 
 ---
-
 ## 💻 Skills Demonstrated
 
-- Linux administration
+- Linux system administration
 - Security log analysis
-- Threat detection
-- Command-line investigation
-- Incident response methodology
+- Detection of brute-force attacks
+- Command-line investigation (grep, wc, ss)
+- Threat identification and analysis
+- Incident investigation workflow
 
 ---
 

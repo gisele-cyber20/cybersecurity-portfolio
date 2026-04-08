@@ -1,12 +1,25 @@
-# 🌐 Network Analysis – Nmap Scan Investigation
+# 🌐 Network Scanning & Service Enumeration – Nmap Investigation
 
-## Project Overview
+## 📌 Project Overview
 
-This project demonstrates how network scanning tools can be used to identify open ports and services on a system.
+This project demonstrates how network scanning techniques can be used to identify open ports, running services, and potential security risks on a target system.
 
-Using **Nmap (Network Mapper)**, a scan was performed against a local host to identify exposed services and potential security risks.
+Using Nmap (Network Mapper), multiple scans were performed against a local host to discover exposed services and gather detailed information about service versions.
 
-This type of investigation is commonly performed by **SOC analysts and penetration testers** to detect vulnerable services or unauthorized systems on a network.
+This type of analysis is commonly performed by security analysts and penetration testers to identify attack surfaces and assess system exposure.
+
+---
+
+## 🎯 SOC Relevance
+
+This project reflects real-world tasks performed by security analysts, including:
+
+- Identifying exposed services on a host
+- Detecting potential attack surfaces
+- Performing service enumeration
+- Assessing risk based on open ports
+
+Network scanning is a critical first step in threat detection and vulnerability assessment.
 
 ---
 
@@ -36,17 +49,19 @@ This command scans the most common TCP ports on the target host to identify open
 Open ports detected:
 
 | Port | Service |
-|-----|------|
+|------|---------|
 | 22 | SSH |
-| 80 | HTTP |
+| 631 | IPP (CUPS) |
+| 9090 | Unknown / zeus-admin |
 
-These results indicate that the system is running an SSH service and a web server.
+These results indicate that the system is running an SSH service, a printing service (CUPS), and an additional unidentified service on port 9090.
 
 ---
 
 ## Step 2 – Perform a Service Version Scan
 
 To identify the exact versions of the services running on the system, the following command was executed.
+Service version detection allows analysts to correlate discovered services with known vulnerabilities (CVEs), making it a critical step in vulnerability assessment.
 
 ### Command Used
 
@@ -61,24 +76,27 @@ This information is critical for identifying known vulnerabilities.
 
 ---
 
-## Step 3 – Analyze Security Risks
+## Step 3 – Analyze Security Exposure
 
-After identifying open services, the results were reviewed to determine potential security concerns.
+After identifying open ports and services, the results were analyzed to assess potential security risks.
 
-Example observations:
+### Key Observations
 
-- SSH exposed on port **22**
-- Web service running on **port 80**
+- SSH service running on port 22 (potential brute-force target)
+- IPP service (CUPS) running on port 631 (may expose printing services)
+- Unknown service detected on port 9090 (requires further investigation)
 
-If these services are exposed externally, they may become targets for:
+### Security Considerations
 
-- Brute-force attacks
-- Exploitation of outdated software
-- Unauthorized access attempts
+- Exposed SSH services are commonly targeted by brute-force attacks
+- Unnecessary services increase the system's attack surface
+- Unknown or unrecognized services may indicate misconfiguration or hidden applications
+
+If these services are exposed to external networks, they could be exploited by attackers.
 
 ---
 
-## Key Takeaways
+## 🔎 Key Findings
 
 Network scanning is an essential step in identifying exposed services and potential attack surfaces.
 
@@ -89,14 +107,17 @@ Security analysts use tools like **Nmap** to:
 - Discover outdated software
 - Evaluate network security posture
 
+These findings demonstrate how exposed services can increase the attack surface and highlight the importance of continuous network monitoring.
+
 ---
 
-## Skills Demonstrated
+## 💻 Skills Demonstrated
 
 - Network reconnaissance
-- Port scanning
-- Service detection
-- Security analysis
+- Port scanning and enumeration
+- Service version detection
+- Attack surface identification
+- Security risk analysis
 
 ## Basic Nmap Scan
 

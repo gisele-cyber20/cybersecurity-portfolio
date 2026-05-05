@@ -1,139 +1,59 @@
-# 🔐 Cybersecurity Portfolio – Gisele Ribeiro
+# Email Security Lab: Identifying Phishing and Social Engineering Attempts
 
-Welcome to my cybersecurity portfolio. This repository showcases hands-on labs and security investigations focused on **Linux administration, log analysis, network traffic analysis, vulnerability identification, and risk assessment**.
+## Project Overview
 
-These projects were built to develop practical, job-ready skills aligned with **SOC Analyst and IT Support roles**.
+In this lab, I acted as an IT security administrator for a small corporate network. The company president received several suspicious emails and asked me to determine whether each message was legitimate or hazardous.
 
----
+The goal of this project was to practice identifying phishing, social engineering, malicious attachments, suspicious links, and unsafe email behavior.
 
-## 👩‍💻 About Me
+## Skills Demonstrated
 
-I am a cybersecurity student with hands-on experience building labs in:
+- Phishing email analysis
+- Social engineering detection
+- Malicious attachment identification
+- Suspicious URL review
+- Email security decision-making
+- User awareness and safe handling procedures
 
-* Linux security and administration
-* SSH authentication log analysis
-* Packet analysis using Wireshark
-* Network scanning with Nmap
-* Risk assessment and security documentation
+## Tools / Environment
 
-I am currently pursuing opportunities where I can apply **troubleshooting, security analysis, and incident investigation skills** in real-world environments.
+- Simulated corporate email inbox
+- Windows-based lab environment
+- Email message review
+- Link inspection by hovering over embedded links
+- Attachment and sender analysis
 
----
+## Email Analysis Summary
 
-## 🛠 Technical Skills
+| Email | Decision | Security Reason |
+|---|---|---|
+| FW: Virus Attack Warning | Delete | Chain-message style warning, urgent language, request to forward to everyone, and poor grammar. |
+| Ethics Video | Verify/Delete | Appears to impersonate Human Resources and asks the user to click a link. The real URL must be checked before trusting it. |
+| Executive Jobs | Delete | Unsolicited recruiting message with promises of higher salary and a registration link. |
+| Re: Lunch Today? | Delete immediately | Contains an executable attachment named `hamster.exe`, which is a major malware risk. |
+| New Service Pack | Delete | Fake Microsoft update message with spelling mistakes and a suspicious update link. |
 
-* Linux administration
-* Log analysis & authentication investigation
-* Wireshark packet analysis
-* Nmap network scanning
-* TCP/IP fundamentals
-* Threat detection & analysis
-* Risk assessment
-* Security documentation
-* Troubleshooting methodology
+## Screenshots
 
----
+### 1. Virus Warning Chain Email
+![Virus Warning Chain Email](screenshots/01-virus-attack-warning.png)
 
-## 📂 Portfolio Projects
+### 2. HR Ethics Video Email
+![HR Ethics Video Email](screenshots/02-ethics-video-hr.png)
 
-### 🔐 1) Linux SSH Log Analysis
+### 3. Executive Jobs Email
+![Executive Jobs Email](screenshots/03-executive-jobs.png)
 
-**Objective:** Investigate failed SSH login attempts and identify suspicious authentication activity.
+### 4. Lunch Email With Executable Attachment
+![Lunch Email With Executable Attachment](screenshots/04-lunch-attachment-exe.png)
 
-**Tools:** Linux, SSH, `/var/log/secure`, `grep`, `cat`, `wc`
+### 5. Fake Microsoft Service Pack Email
+![Fake Microsoft Service Pack Email](screenshots/05-fake-service-pack.png)
 
-**Highlights:**
+## What I Learned
 
-* Analyzed authentication logs for failed login attempts
-* Identified patterns consistent with brute-force behavior
-* Investigated login sources and activity patterns
-* Documented findings and security risks
+This lab helped me understand that phishing emails are not always obvious at first glance. Some messages try to appear trustworthy by pretending to come from Human Resources, Microsoft, recruiters, or known contacts. I learned to look for warning signs such as urgent language, suspicious links, executable attachments, spelling mistakes, and requests to click or register through unknown sources.
 
-📁 `linux-ssh-log-analysis`
+## Result
 
----
-
-### 🌐 2) Network Scan Investigation
-
-**Objective:** Identify open ports and evaluate system exposure.
-
-**Tools:** Nmap
-
-**Highlights:**
-
-* Performed port scanning and service enumeration
-* Identified exposed services (SSH, IPP, unknown ports)
-* Assessed potential attack surface
-* Documented security risks and observations
-
-📁 `network-analysis`
-
----
-
-### 📡 3) Network Traffic Analysis (Wireshark)
-
-**Objective:** Analyze network traffic and protocol behavior.
-
-**Tools:** Wireshark
-
-**Highlights:**
-
-* Captured and analyzed ICMP, DNS, and HTTP traffic
-* Identified request/response patterns
-* Investigated protocol behavior
-* Analyzed unencrypted traffic for visibility
-
-📁 `packet-analysis`
-
----
-
-### 🛡 4) Security Risk Assessment
-
-**Objective:** Identify and evaluate cybersecurity risks using a risk register.
-
-**Tools:** Risk register methodology
-
-**Highlights:**
-
-* Identified common organizational security risks
-* Evaluated likelihood and impact
-* Prioritized risks based on severity
-* Recommended mitigation strategies
-
-📁 `security-assessment`
-
----
-
-## 🔎 What This Portfolio Demonstrates
-
-* Ability to analyze Linux authentication logs
-* Detection of suspicious activity and failed login attempts
-* Understanding of network traffic and protocols
-* Identification of exposed services and risks
-* Structured troubleshooting and investigation approach
-* Clear and professional security documentation
-
----
-
-## 🎯 Career Focus
-
-I am currently pursuing entry-level roles such as:
-
-* SOC Analyst (Intern / Junior)
-* Junior Security Analyst
-* IT Support Technician
-* Technical Support / Help Desk
-* Security Operations Analyst
-
----
-
-## 📬 Contact
-
-* GitHub: https://github.com/gisele-cyber20
-* LinkedIn: https://linkedin.com/in/agiseleribeiro
-
----
-
-## 🚀 Notes
-
-This portfolio is continuously updated as I build new labs and expand my cybersecurity skill set.
+I deleted emails that showed signs of social engineering or malware risk and kept only messages that could be verified as safe.

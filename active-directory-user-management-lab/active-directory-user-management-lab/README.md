@@ -82,6 +82,15 @@ When a new employee joins the company:
 7. Document who approved the access.
 8. Confirm the user can log in and access only the correct folders.
 
+
+
+![User Account Creation](Images/user-account-creation.png)
+
+
+![User Account Creation](Images/user-account-creation..png)
+
+
+![User Account Creation](Images/user-account-creation...png)
 ---
 
 ## User Offboarding Process

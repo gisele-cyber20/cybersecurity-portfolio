@@ -183,18 +183,6 @@ Regular access reviews help reduce unnecessary permissions and support complianc
 
 ---
 
-<!-- 
-TODO for me:
-Add screenshots later:
-1. User account creation
-2. Security group creation
-3. User added to group
-4. Password reset setting
-5. Account disabled
-6. Folder permissions
--->
-
----
 
 ## What I Learned
 

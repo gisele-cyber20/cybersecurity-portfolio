@@ -91,6 +91,12 @@ When a new employee joins the company:
 
 
 ![User Account Creation](Images/user-account-creation.png...png)
+
+<img src="Images/Security group creation.png" width="700">
+
+<img src="Images/Security group creation..png" width="700">
+
+<img src="Images/Security group creation...png" width="700">
 ---
 
 ## User Offboarding Process

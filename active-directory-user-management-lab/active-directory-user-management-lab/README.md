@@ -84,7 +84,7 @@ When a new employee joins the company:
 
 
 
-![User Account Creation](Images/user-account-creation.png)
+<img src="Images/user-account-creation.png" width="700">
 
 
 ![User Account Creation](Images/user-account-creation..png)

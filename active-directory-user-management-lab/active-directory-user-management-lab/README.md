@@ -90,7 +90,7 @@ When a new employee joins the company:
 ![User Account Creation](Images/user-account-creation..png)
 
 
-![User Account Creation](Images/user-account-creation...png)
+![User Account Creation](Images/user-account-creation.png...png)
 ---
 
 ## User Offboarding Process

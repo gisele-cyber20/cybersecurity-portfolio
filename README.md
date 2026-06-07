@@ -174,7 +174,7 @@ I am actively developing skills in:
 ## Contact
 
 ### LinkedIn
-[(Add your LinkedIn URL)](https://www.linkedin.com/in/agiseleribeiro)
+https://www.linkedin.com/in/agiseleribeiro
 
 ### GitHub
 https://github.com/gisele-cyber20

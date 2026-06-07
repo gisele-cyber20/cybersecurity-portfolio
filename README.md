@@ -79,7 +79,7 @@ My goal is to begin my cybersecurity career in areas such as:
 ### In Progress
 - CompTIA Security+
 - CompTIA A+
-- CCNA: Introduction to Networks
+
 
 ### Coursework & Hands-On Training
 - Red Hat Enterprise Linux Administration Labs
@@ -87,6 +87,7 @@ My goal is to begin my cybersecurity career in areas such as:
 - Cisco Networking Labs
 - Digital Forensics Labs
 - Security Operations Labs
+- CCNA: Introduction to Networks
 
 ---
 

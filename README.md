@@ -1,32 +1,27 @@
-## Quick View
+# Gisele Ribeiro
 
-I am a Cybersecurity student with a background in logistics, documentation, troubleshooting, and process accuracy. I am building hands-on experience in Linux, security monitoring, IAM, network analysis, packet analysis, endpoint monitoring, and cybersecurity risk assessment.
+Cybersecurity Student | Computer Engineering Student
 
-### Roles I am targeting
-- Cybersecurity Intern
-- IAM Intern
-- SOC Analyst Intern
-- GRC Intern
-- IT Security Intern
-- IT Support / Security Support Intern
+## Technical Skills
 
-### Technical Skills
-- Linux
-- Windows
-- Wazuh
-- Wireshark
-- Packet Tracer
-- AWS S3
-- GitHub
-- Basic networking
-- Log analysis
-- Access control
-- Security documentation
+- SIEM: Wazuh
+- Vulnerability Management: Nessus
+- Networking: Wireshark, TCP/IP
+- Operating Systems: Windows, Linux (RHEL, Ubuntu)
+- IAM: Active Directory
+- Virtualization: VMware
+- Security Tools: Nessus, Wazuh
 
-### Professional Skills
-- Documentation
-- Attention to detail
-- Troubleshooting
-- Communication
-- Process tracking
-- Problem solving
+## Featured Projects
+
+### Vulnerability Management Project
+Performed authenticated Nessus scans, identified vulnerabilities, applied remediation, and validated results.
+
+### Wazuh SIEM Detection & Alert Investigation
+Analyzed Windows endpoint logs and investigated security events.
+
+### Active Directory Attack & Defense Lab
+Configured AD environment and practiced account management and security controls.
+
+### Linux SSH Log Analysis
+Investigated authentication logs and identified suspicious activity.
